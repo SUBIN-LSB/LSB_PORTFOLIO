@@ -1,0 +1,240 @@
+/* 헤더 영역 css */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 85px;
+    background: black;
+    z-index: 100;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 15px;
+}
+header li {
+    font-size: 15px;
+    font-weight: 200;
+    color: #78699A;
+    width: 85px;
+    text-align: center;
+}
+
+/* 메인 영역 css */
+.main_T{
+    text-align: center;
+    margin: 235px 0 40px 0;
+}
+.main_T h1 {
+    font-size: 100px;
+    font-weight: 100;
+    margin: 0;
+}
+.main_T p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* 메인 영역 유령 관련 css + anime */
+.ghost_position{
+    position: relative;
+    overflow: hidden;
+    height: 545px;
+}
+
+.main_1G {
+    position: absolute;
+    left: 0;
+    top: 60%;
+}
+.main_1G.up {
+    animation: up 1s cubic-bezier(0, 0, 0.17, 1.21);
+}
+.main_2G {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+}
+.main_2G.up {
+    animation: up 1s cubic-bezier(0, 0, 0.17, 1.21);
+}
+.main_3G {
+    position: absolute;
+    right: 20%;
+    top: 55%;
+}
+.main_3G.up {
+    animation: up 1s cubic-bezier(0, 0, 0.17, 1.21);
+}
+.main_4G {
+    position: absolute;
+    right: 0;
+    top: 62%;
+}
+.main_4G.up {
+    animation: up 1s cubic-bezier(0, 0, 0.17, 1.21);
+}
+
+/* 토글로 클릭했을 시 실행되는 애니메이션 추가 */
+@keyframes up {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 기본적으로 유령이 움직이는 애니메이션 추가 */
+.G_body {
+    animation: bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 내 프로필 영역 css */
+#about_me_page {
+    height: 875px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_me_box {
+    height: 540px;
+    display: flex;
+    gap: 50px;
+}
+
+/* 프로필 사진 유령 관련 css */
+.about_me_image {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 364px;
+    background: #78699A;
+    border-radius: 20px;
+}
+
+.about_me_1G {
+    position: absolute;
+    left: -10%;
+    top: 45%;
+}
+.about_me_1G.hide{
+    animation: hide 2s cubic-bezier(0.42, 0, 0.19, 1.11);
+}
+.about_me_2G {
+    position: absolute;
+    right: -5%;
+    top: 65%;
+}
+.about_me_2G.hide{
+    animation: hide 2s cubic-bezier(0.42, 0, 0.19, 1.11);
+}
+
+/* 누르면 유령이 놀라서 밑으로 숨었다가 다시 나오는 애니메이션 */
+@keyframes hide {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(5px);
+    }
+    35% {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+    70% {
+        transform: translateY(310px);
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 누르면 눈이 커지며 놀라는 애니메이션 */
+.eyeEvent.eEvent {
+    animation: eEvent 1s ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes eEvent {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* 프로필 텍스트 관련 css */
+.about_me_T {
+    width: 436px;
+}
+
+.about_me_T h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.about_me_T p {
+    font-size: 15px;
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+.about_me_T h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+/* 내 기술 css */
+.skills {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 5px;
+}
+
+.skills span {
+    font-size: 15px;
+    background: #78699A;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+/* 학력 */
+.education_T p {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
