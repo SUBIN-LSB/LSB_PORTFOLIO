@@ -1,3 +1,4 @@
+
 // 안에 들어가는 유령 svg 들에 마우스의 방향을 쳐다보는 이벤트 추가
 const svgElements = document.querySelectorAll('.G_body');
 const groupMovementRadius = 10; // g 그룹의 이동 반경
@@ -33,7 +34,7 @@ document.addEventListener('mousemove', (event) => {
 // 클릭하면 up 애니메이션을 실행시키는 이벤트 추가
 // 애니메이션을 넣을 개체 선언 ghosts
 const MGhosts = document.querySelectorAll('.main_1G, .main_2G, .main_3G, .main_4G');
-const AGhosts1 = document.querySelectorAll('.about_me_1G,.about_me_2G,.eyeEvent');
+const AGhosts1 = document.querySelectorAll('.about_me_1G,.about_me_2G');
 
 // ghosts 에 클릭 이벤트를 추가하여 > 클릭 시 up 클래스를 토글
 MGhosts.forEach(ghost => {

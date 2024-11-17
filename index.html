@@ -11,6 +11,9 @@
                 padding: 0;
                 box-sizing: border-box;
             }
+            html {
+                scroll-behavior: smooth;
+            }
             body {
                 background: #402C4B;
                 font-family: Pretendard;
@@ -26,11 +29,11 @@
     <body>
         <header>
             <ul>
-                <li> MAIN </li>
-                <li> ABOUT ME </li>
+                <li> <a class="HM_a" href="#main_page"> MAIN </a> </li>
+                <li> <a class="HM_a" href="#about_me_page"> ABOUT ME </a> </li>
                 <li> <img src="img/Logo.svg" /> </li>
-                <li> PROJECT </li>
-                <li> CONTACT </li>
+                <li> <a class="HM_a" href="#project_page"> PROJECT </a> </li>
+                <li> <a class="HM_a" href="#contact_page"> CONTACT </a> </li>
             </ul>
         </header>
 
@@ -109,19 +112,24 @@
                 </div>
 
                 <article class="about_me_T">
-                    <h1>SUBIN LEE</h1>
-                    <p>HTML5 기반의 웹게임을 제작하는 웹게임 프로그래머 이수빈입니다.<br>
-                       자신만의 웹게임 개발에 끈기를 가지고 끝까지 노력합니다.</p>
+                    <h1> SUBIN LEE </h1>
+
+                    <p> HTML5 기반의 웹게임을 제작하는 웹게임 프로그래머 이수빈입니다. <br>
+                        자신만의 웹게임 개발에 끈기를 가지고 끝까지 노력합니다. </p>
+
                     <h2>SKILL</h2>
+
                     <div class="skills">
-                        <span>C#</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        <span>GitHub</span><span>Unity</span><span>GameMaker</span><span>p5.js</span>
-                        <span>node.js</span><span>jQuery</span><span>figma</span><span>illustrator</span>
+                        <span class="sk1"> C# </span><span class="sk1"> JavaScript </span><span class="sk1"> Unity </span><span class="sk1"> GameMaker </span><span class="sk1"> p5.js </span>
+                        <span class="sk2"> HTML </span><span class="sk2"> CSS </span><span class="sk2"> GitHub </span><span class="sk2"> node.js </span><span class="sk2"> jQuery </span>
+                        <span class="sk3"> Figma </span><span class="sk3"> illustrator </span>
                     </div>
-                    <h2>EDUCATION</h2>
+
+                    <h2> EDUCATION </h2>
+
                     <div class="education_T">
-                        <p>2022.12.23 신림고등학교 졸업</p>
-                        <p>2025.01.01 계원예술대학교 디지털미디어디자인(졸업예정)</p>
+                        <p> 2022.12.23 &emsp; 신림고등학교 졸업 </p>
+                        <p> 2025.01.01 &emsp; 계원예술대학교 디지털미디어디자인(졸업예정) </p>
                     </div>
                 </article>
 
@@ -131,16 +139,169 @@
         <section id="project_page">
             <div class="project_box">
 
+                <article class="project_T">
+                    <h1> 도둑 고양이는 누구? </h1>
+
+                    <p>
+                        생쥐 탐정인 주인공은 이번 사건의 피해자 포섬 '지이'의 냉장고 털이 사건을
+                        파헤치기 위해 수소문끝에 4명의 용의자를 모집한다. 진실을 말하고 있는 용의자와
+                        거짓말을 하는 용의자 사이에서 진정한 범인을 잡을 수 있을 것인가. ...
+                        텍스트 기반의 거짓말 쟁이 찾기 추리형 비주얼 노벨, 캐릭터들과의 대화 기능을 주로,
+                        현재 진행 상황 저장 등의 주 기능 구현
+                    </p>
+
+                    <div class="project_more">
+                        <div class="more">
+                            <span> 텍스트 기반 비주얼 노벨 </span>
+                            <span> JavaScript, jQuery, HTML, CSS </span>
+                        </div>
+                        <div class="more">
+                            <span> 2024.04.25 ~2024.06.13 </span>
+                            <span> 1인 프로젝트 </span>
+                        </div>
+                    </div>
+
+                    <div class="project_T_Button">
+                        <button onclick="window.open('https://subin-lsb.github.io/Who_is_the_thief_cat/')"> VIEW </button>
+                        <button> CODE </button>
+                    </div>
+                </article>
+
+                <div class="project_image P1"></div>
+
+            </div>
+
+            <div class="project_box">
+
+                <div class="project_image P2"></div>
+
+                <article class="project_T">
+                    <h1> 8비트 스케치 캔버스 </h1>
+
+                    <p>
+                        가볍고 심플하게, 그림판과 비슷한 기능의 간단한 8비트 도트 캔버스.
+                        p5.js를 사용하여 그림판의 가장 기본적인 기능인 그리기, 지우기, 뒤로가기, 전체 지우기,
+                        색상 변경 등의 주요 기능을 선정하여 제작
+                    </p>
+
+                    <div class="project_more">
+                        <div class="more">
+                            <span> 픽셀 드로잉 기능 구현 </span>
+                            <span> p5.js, HTML, CSS </span>
+                        </div>
+                        <div class="more">
+                            <span> 2024.04.10 ~ 2024.06.09 </span>
+                            <span> 1인 프로젝트 </span>
+                        </div>
+                    </div>
+
+                    <div class="project_T_Button">
+                        <button onclick="window.open('https://subin-lsb.github.io/8-Bit_Sketch_Canvas/')"> VIEW </button>
+                        <button> CODE </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="project_box">
+
+                <article class="project_T">
+                    <h1> 퇴마일지 </h1>
+
+                    <p>
+                        요괴와 함께 사라진 할머니덕에 되찾은 평화는 오래가지 못하고,
+                        무당 집안의 박수무당 박준화는 귀문이 아직 열리지 않은 채 요괴를 마주하는 그 순간
+                        운명처럼 열린 귀문에 할머니를 대신하여 요괴퇴치에 나서는 박준화.
+                        과연 박준화는 할머니의 뒤를 이은 최고의 무당이 될 수 있을 것인가. ...
+                        게임 프로모션 페이지, 포인트 앤 클릭 추리형 비주얼 노벨 게임의 기획 및,
+                        디자인, 제작.
+                    </p>
+
+                    <div class="project_more">
+                        <div class="more">
+                            <span> 포인트 앤 클릭 비주얼 노벨 </span>
+                            <span> Figma, CLIP STUDIO PAINT </span>
+                        </div>
+                        <div class="more">
+                            <span> 2023.09.10 ~ 2023.12.11 </span>
+                            <span> 1인 프로젝트 </span>
+                        </div>
+                    </div>
+
+                    <div class="project_T_Button">
+                        <button onclick="window.open('https://www.figma.com/proto/0OTeZ56ZPsZamMpCHq6H0c/Untitled?page-id=0%3A1&node-id=13-94&node-type=canvas&m=dev&scaling=contain&content-scaling=fixed&starting-point-node-id=13%3A94&t=3icWf6Mn30jcoeA0-1')"> VIEW </button>
+                        <button> CODE </button>
+                    </div>
+                </article>
+
+                <div class="project_image P3"></div>
+
             </div>
         </section>
 
         <section id="contact_page">
             <div class="contact_box">
 
+                <div class="contact_image_box">
+                    <article class="contact_image_T">
+                        <h1> CONTACT </h1>
+                        <p> 여튼안에 들어가는 어쩌구 저쩌구 영어로 적든 한국어로 적든 </p>
+                    </article>
+
+                    <div class="ghost_image">
+                        <svg class="contact_1G G_body" width="222" height="279" viewBox="0 0 222 279" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M110.789 0C55.9202 0 11.0895 42.9786 8.12555 97.1073H7.96956L0 277.751C5.78498 275.906 9.01934 271.918 12.2537 267.929C16.6653 262.489 21.0769 257.049 31.9608 257.049C42.8447 257.049 47.2563 262.489 51.6679 267.929C56.0794 273.369 60.491 278.81 71.3749 278.81C82.2588 278.81 86.6704 273.369 91.082 267.929C95.4936 262.489 99.9052 257.049 110.789 257.049C121.673 257.049 126.085 262.489 130.496 267.929C134.908 273.369 139.319 278.81 150.203 278.81C161.087 278.81 165.499 273.369 169.91 267.929C174.322 262.489 178.733 257.049 189.617 257.049C200.501 257.049 204.913 262.489 209.324 267.929C212.559 271.918 215.793 275.906 221.578 277.751L213.609 97.1073H213.453C210.489 42.9786 165.658 0 110.789 0Z" fill="white"/>
+
+                            <g class="eyes" transform="translate(0, 0)">
+                                <circle cx="136.69" cy="74.2805" r="14.2805" fill="black"/>
+                                <circle cx="85.2805" cy="74.2805" r="14.2805" fill="black"/>
+                            </g>
+                        </svg>
+
+                        <svg class="contact_2G G_body" width="222" height="279" viewBox="0 0 222 279" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M110.789 0C55.9202 0 11.0895 42.9786 8.12555 97.1073H7.96956L0 277.751C5.78498 275.906 9.01934 271.918 12.2537 267.929C16.6653 262.489 21.0769 257.049 31.9608 257.049C42.8447 257.049 47.2563 262.489 51.6679 267.929C56.0794 273.369 60.491 278.81 71.3749 278.81C82.2588 278.81 86.6704 273.369 91.082 267.929C95.4936 262.489 99.9052 257.049 110.789 257.049C121.673 257.049 126.085 262.489 130.496 267.929C134.908 273.369 139.319 278.81 150.203 278.81C161.087 278.81 165.499 273.369 169.91 267.929C174.322 262.489 178.733 257.049 189.617 257.049C200.501 257.049 204.913 262.489 209.324 267.929C212.559 271.918 215.793 275.906 221.578 277.751L213.609 97.1073H213.453C210.489 42.9786 165.658 0 110.789 0Z" fill="white"/>
+
+                            <g class="eyes" transform="translate(0, 0)">
+                                <circle cx="136.69" cy="74.2805" r="14.2805" fill="black"/>
+                                <circle cx="85.2805" cy="74.2805" r="14.2805" fill="black"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <article class="contact_T">
+                    <div class="contact_P CP1">
+                        <p> PHONE &emsp; <span>010-8773-5035</span> </p>
+                        <p> EMAIL &emsp; <span>paya5959@gmail.com</span> </p>
+                    </div>
+                    <div class="contact_P">
+                        <p> GITHUB &emsp; <span>https://github.com/SUBIN-LSB</span> </p>
+                        <p> RESUME &emsp; <span>https://docs.google.com/PORTFOLIO-LSB</span> </p>
+                    </div>
+                </article>
+
+                <div class="contact_img">
+
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="21" cy="21" r="21" fill="#78699A"/>
+                    </svg>
+
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="21" cy="21" r="21" fill="#78699A"/>
+                    </svg>
+
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="21" cy="21" r="21" fill="#78699A"/>
+                    </svg>
+
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="21" cy="21" r="21" fill="#78699A"/>
+                    </svg>
+
+                </div>
+
             </div>
         </section>
-
-
 
         <script src="script.js"></script>
     </body>
