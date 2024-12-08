@@ -62,3 +62,18 @@ AGhosts1.forEach(ghost => {
         }, 2000); // 2000ms = 2초
     });
 });
+
+// 코드 버튼을 클릭하면 코드리뷰를 볼 수 있게 토글
+
+// 버튼 요소 가져오기
+const button = document.querySelector('.code');
+// colorscripter-code 요소 가져오기
+const codeElement1 = document.querySelector('.colorscripter-code');
+const codeElement2 = document.querySelector('.P1');
+
+
+// 클릭 이벤트 리스너 추가
+button.addEventListener('click', () => {
+    codeElement1.classList.toggle('activeCODE');
+    codeElement2.classList.toggle('activeCODE');
+});

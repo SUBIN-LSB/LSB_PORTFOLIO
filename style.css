@@ -37,6 +37,10 @@ header a:hover {
 /*    color: white;*/
 /*}*/
 
+button, a, svg, input[type="button"], input[type="submit"] {
+    cursor: url('img/cursor.svg'), auto;
+}
+
 /* 메인 영역 css */
 #main_page {
     height: 1080px;
@@ -252,15 +256,18 @@ header a:hover {
 }
 
 .sk1 {
-    background: rgba(120, 105, 154, 0.8);
+    border: 3px solid rgba(120, 105, 154, 0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .sk2 {
-    background: rgba(120, 105, 154, 0.5);
+    border: 3px solid rgba(120, 105, 154, 0.5);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .sk3 {
-    background: rgba(120, 105, 154, 0.2);
+    border: 3px solid  rgba(120, 105, 154, 0.2);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* 학력 */
@@ -279,7 +286,33 @@ header a:hover {
     align-items: center;
 }
 
+.colorscripter-code {
+    position: absolute;
+    width: 850px;
+    height: 478px;
+    border-radius: 20px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.colorscripter-code.activeCODE {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.colorscripter-code::-webkit-scrollbar {
+    width: 10px;
+}
+.colorscripter-code::-webkit-scrollbar-thumb {
+    width: 15px;
+    border-radius: 10px;
+    background-color: #78699A;
+}
+
 .project_image {
+    position: absolute;
+    right: 300px;
     width: 850px;
     height: 478px;
     border-radius: 20px;
@@ -289,6 +322,13 @@ header a:hover {
     background-image: url("img/porject_cat.gif");
     background-size: cover;
     background-position: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.P1.activeCODE {
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
 
 .project_image.P2 {
@@ -356,7 +396,6 @@ header a:hover {
 .project_T button:hover {
     background: rgba(120, 105, 154, 0.5);
 }
-
 
 /* 콘택트 영역 css */
 
