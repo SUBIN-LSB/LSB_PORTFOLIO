@@ -1,0 +1,632 @@
+body {
+    cursor: url('img/Logo.svg') 0 0, auto;
+}
+
+button, a, svg, .contact_T span, input[type="button"], input[type="submit"] {
+    cursor: url('img/cursor.svg') 0 0, auto;
+}
+
+
+/* 헤더 영역 css */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 85px;
+    background: black;
+    z-index: 100;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 15px;
+}
+header li {
+    font-size: 15px;
+    font-weight: 200;
+    color: #78699A;
+    width: 85px;
+    text-align: center;
+}
+
+header a {
+    color: #78699A;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+header a:hover {
+    color: white;
+}
+
+/*header a.active {*/
+/*    color: white;*/
+/*}*/
+
+/* 메인 영역 css */
+#main_page {
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_T{
+    text-align: center;
+    padding: 235px 0 50px 0;
+}
+.main_T h1 {
+    font-size: 35px;
+    font-weight: 100;
+    margin: 0;
+}
+.main_T p {
+    font-size: 15px;
+    font-weight: 200;
+}
+.main_T span {
+    font-weight: 800;
+    font-size: 45px;
+}
+
+/* 메인 영역 유령 관련 css + anime */
+.ghost_position{
+    position: relative;
+    overflow: hidden;
+    height: 545px;
+}
+
+.main_1G {
+    position: absolute;
+    left: 0;
+    top: 60%;
+}
+.main_1G.up {
+    animation: up 1s cubic-bezier(0, 0, 0.17, 1.21);
+}
+.main_2G {
+    position: absolute;
+    left: 22%;
+    top: 50%;
+}
+.main_2G.up {
+    animation: up 1s cubic-bezier(0, 0, 0.17, 1.21);
+}
+.main_3G {
+    position: absolute;
+    right: 22%;
+    top: 55%;
+}
+.main_3G.up {
+    animation: up 1s cubic-bezier(0, 0, 0.17, 1.21);
+}
+.main_4G {
+    position: absolute;
+    right: 0;
+    top: 62%;
+}
+.main_4G.up {
+    animation: up 1s cubic-bezier(0, 0, 0.17, 1.21);
+}
+
+/* 토글로 클릭했을 시 실행되는 애니메이션 추가 */
+@keyframes up {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 기본적으로 유령이 움직이는 애니메이션 추가 */
+.G_body {
+    animation: bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* 내 프로필 영역 css */
+#about_me_page {
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_me_box {
+    height: 540px;
+    display: flex;
+    gap: 50px;
+}
+
+/* 프로필 사진 유령 관련 css */
+.about_me_image {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 364px;
+    background: #78699A;
+    border-radius: 20px;
+}
+
+.about_me_1G {
+    position: absolute;
+    left: -10%;
+    top: 45%;
+}
+.about_me_1G.hide{
+    animation: hide 2s cubic-bezier(0.42, 0, 0.19, 1.11);
+}
+.about_me_2G {
+    position: absolute;
+    right: -5%;
+    top: 65%;
+}
+.about_me_2G.hide{
+    animation: hide 2s cubic-bezier(0.42, 0, 0.19, 1.11);
+}
+
+/* 누르면 유령이 놀라서 밑으로 숨었다가 다시 나오는 애니메이션 */
+@keyframes hide {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(5px);
+    }
+    35% {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+    70% {
+        transform: translateY(310px);
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 누르면 눈이 커지며 놀라는 애니메이션 */
+.eyeEvent.eEvent {
+    animation: eEvent 1s ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes eEvent {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 프로필 텍스트 관련 css */
+.about_me_T {
+    width: 436px;
+}
+
+.about_me_T h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.about_me_T p {
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+.about_me_T h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+/* 내 기술 css */
+.skills {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 5px;
+}
+
+.skills span {
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+    padding: 5px 16px;
+    border-radius: 15px;
+}
+
+.sk1 {
+    border: 3px solid rgb(120, 105, 154);
+    color: white;
+    font-weight: bold;
+}
+
+.sk2 {
+    border: 3px solid rgba(120, 105, 154, 0.42);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sk3 {
+    border: 3px solid rgba(120, 105, 154, 0.11);
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* 학력 */
+.education_T p {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+
+/* 프로젝트 영역 css */
+
+#project_page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_box {
+    height: 1080px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.project_I {
+    position: relative;
+}
+
+.language-javascript_more1 {
+    position: absolute;
+    /*right: 300px;*/
+    margin-top: 30px;
+    width: 850px;
+    height: 478px;
+    border-radius: 20px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    z-index: 20;
+}
+
+.language-javascript_more1.activeCODE {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    z-index: 20;
+}
+
+.language-javascript_more1::-webkit-scrollbar {
+    width: 10px;
+}
+.language-javascript_more1::-webkit-scrollbar-thumb {
+    width: 15px;
+    border-radius: 10px;
+    background-color: #78699A;
+}
+.language-javascript_more2 {
+    position: absolute;
+    /*right: 300px;*/
+    margin-top: 30px;
+    width: 850px;
+    height: 478px;
+    border-radius: 20px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    z-index: 20;
+}
+
+.language-javascript_more2.activeCODE {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    z-index: 20;
+}
+
+.language-javascript_more2::-webkit-scrollbar {
+    width: 10px;
+}
+.language-javascript_more2::-webkit-scrollbar-thumb {
+    width: 15px;
+    border-radius: 10px;
+    background-color: #78699A;
+}
+.language-javascript_more3 {
+    position: absolute;
+    /*right: 300px;*/
+    margin-top: 30px;
+    width: 850px;
+    height: 478px;
+    border-radius: 20px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    z-index: 20;
+}
+
+.language-javascript_more3.activeCODE {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    z-index: 20;
+}
+
+.language-javascript_more3::-webkit-scrollbar {
+    width: 10px;
+}
+.language-javascript_more3::-webkit-scrollbar-thumb {
+    width: 15px;
+    border-radius: 10px;
+    background-color: #78699A;
+}
+.language-javascript_more4 {
+    position: absolute;
+    /*right: 300px;*/
+    margin-top: 30px;
+    width: 850px;
+    height: 478px;
+    border-radius: 20px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    z-index: 20;
+}
+
+.language-javascript_more4.activeCODE {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    z-index: 20;
+}
+
+.language-javascript_more4::-webkit-scrollbar {
+    width: 10px;
+}
+.language-javascript_more4::-webkit-scrollbar-thumb {
+    width: 15px;
+    border-radius: 10px;
+    background-color: #78699A;
+}
+
+.project_image {
+    /*right: 300px;*/
+    margin-top: 15px;
+    width: 850px;
+    height: 478px;
+    border-radius: 20px;
+    background: #78699A;
+
+}
+.project_image.P1 {
+    background-image: url("img/porject_cat.gif");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.P1.activeCODE {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.project_image.P2 {
+    background-image: url("img/project_dot.gif");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.P2.activeCODE {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.project_image.P3 {
+    background-image: url("img/project_monster.gif");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.P3.activeCODE {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.project_image.P3-1 {
+    position: absolute;
+    /*right: 300px;*/
+    /*margin-top: 30px;*/
+    background-image: url("img/project_monster2.gif");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.P3-1.activeCODE {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.project_image.P4 {
+    background-image: url("img/project_nine.gif");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.P4.activeCODE {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.project_image img:hover {
+    background: #402C4B;
+}
+
+/* 프로젝트 영역 텍스트 css */
+
+.project_T {
+    width: 420px;
+}
+
+.project_T h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.project_T pre {
+    font-family: Pretendard-Regular;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.project_more {
+    margin: 50px 0 50px 0;
+}
+
+.more {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.more span {
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.project_T_Button {
+    display: flex;
+    gap: 65px;
+}
+
+.project_T button {
+    width: 165px;
+    height: 42px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    border: 0;
+    background: #78699A;
+    transition: 0.2s ease-in-out;
+}
+
+.project_T button:hover {
+    background: rgba(120, 105, 154, 0.5);
+}
+
+/* 콘택트 영역 css */
+
+#contact_page {
+    height: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_image_box {
+    position: relative;
+    overflow: hidden;
+    height: 310px;
+    width: 1320px;
+    background: #78699A;
+    border-radius: 20px;
+}
+
+.contact_image_T {
+    position: absolute;
+}
+.contact_image_T h1 {
+    margin: 50px 0 25px 101px;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.contact_image_T p {
+    margin-left: 101px;
+    font-weight: 200;
+}
+
+.contact_img {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-right: 50px;
+}
+
+.contact_T {
+    margin: 50px 0 50px 50px;
+}
+.contact_P {
+    display: flex;
+    gap: 20px;
+}
+
+.CP1 {
+    margin-bottom: 55px;
+}
+
+.contact_P p {
+    font-size: 20px;
+    width: 500px;
+}
+
+.contact_P span {
+    font-weight: 200;
+}
+
+/* 콘텍트 유령 포지션 */
+
+.contact_1G {
+    position: absolute;
+    top: 45%;
+    right: 25.5%;
+}
+
+.contact_2G {
+    position: absolute;
+    top: 25%;
+    right: 7.5%;
+}
