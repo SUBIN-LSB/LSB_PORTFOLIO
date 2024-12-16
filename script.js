@@ -108,3 +108,20 @@ const addToggleListener = ({ buttonSelector, elementSelectors, defaultText }) =>
 
 // 모든 매핑에 대해 이벤트 리스너 추가
 buttonMappings.forEach(addToggleListener);
+
+// 이메일 클릭 시 복사되는 스크립트
+
+// 복사할 이메일 주소가 포함된 요소 선택
+const emailElement = document.getElementById("email-text");
+
+// 클릭 시 복사 기능 구현
+emailElement.addEventListener("click", () => {
+    const email = emailElement.textContent; // 이메일 텍스트 가져오기
+    navigator.clipboard.writeText(email) // 클립보드에 텍스트 복사
+        .then(() => {
+            alert("이메일이 복사되었습니다");
+        })
+        .catch(err => {
+            console.error("복사 실패");
+        });
+});
